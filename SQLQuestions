@@ -1,0 +1,22 @@
+ 1. How to print max value in SQL table?
+ ->
+SELECT MAX(row_name) as max_items
+FROM TABLE_NAME;
+
+2. How to print second max value in SQL table?
+->
+SELECT MAX (column_name)
+FROM table_name
+WHERE column_name NOT IN (SELECT Max (column_name)
+                          FROM table_name);
+
+
+3. How to reverse a table index in SQL?
+->
+CREATE INDEX emp_id_list ON employee54(Emp_id DESC)
+# or
+create index emp_id_list on employee54(Emp_Id) reverse;
+
+4. What is the major difference in primary key and foreign key?
+-> The main difference between them is that the primary key identifies each
+record in the table, whereas the foreign key is used to link two tables together.
